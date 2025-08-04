@@ -11,7 +11,7 @@ class Mlv < Formula
   def install
     ENV["CGO_ENABLED"] = "0"
     ldflags = "-s -w"
-    system "go", "build", *std_go_args(ldflags: ldflags), "-o", bin/"mlv", "./cmd"
+    system "go", "build", *std_go_args(ldflags: ldflags), "-o", bin/"mlv", "."
   end
 
   test do
